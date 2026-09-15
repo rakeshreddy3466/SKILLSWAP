@@ -1,0 +1,8 @@
+# The original Dockerfile, kept only to measure the "before" image size.
+# Full Debian based Node image, dev dependencies included, runs as root.
+FROM node:20
+WORKDIR /app
+COPY . .
+RUN npm install
+EXPOSE 4000
+CMD ["node", "src/index.js"]
